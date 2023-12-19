@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your SaaS Website</title>
+    <link rel="stylesheet" href="websiteStyle.css" />
+    <!-- Include your custom styles here -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.dronahq.com/dronahq-embed.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">Your Logo</div>
+            <ul>
+                <li><a onclick="openLoginPopup()">Login</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Login Popup -->
+    <div id="loginPopup" class="popup">
+        <h2>Login</h2>
+        <form id="loginForm" onsubmit="submitLogin(); return false;">
+            <label for="loginEmail">Email:</label>
+            <input type="email" id="loginEmail" name="loginEmail" placeholder="Your Email" required>
+            <button type="submit">Submit</button>
+            <button onclick="closeLoginPopup()">Close</button>
+        </form>
+    </div>
+    <div class="popup-overlay" id="loginOverlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your SaaS Solution</h1>
+            <p>Empowering businesses with innovative solutions.</p>
+            <button class="cta-button" onClick="openPopup()">Get Started</button>
+
+            <!-- Popup Form -->
+            <div id="popup" class="popup">
+                <h2>Enter Details</h2>
+                <form id="detailsForm">
+                    <label for="FirstName">First Name:</label>
+                    <input type="text" id="FirstName" name="FirstName" placeholder="First Name" required>
+                    <label for="LastName">Last Name:</label>
+                    <input type="text" id="LastName" name="LastName" placeholder="Last Name" required>
+                    <label for="Email">Email:</label>
+                    <input type="email" id="Email" name="Email" placeholder="Email" required>
+                    <button type="button" onclick="buttonClick()">Submit</button>
+                    <button onclick="closePopup()">Close</button>
+                </form>
+            </div>
+            <div class="popup-overlay"></div>
+        </div>
+    </section>
+
+    <!-- Tray Section -->
+    <div id="tray" class="tray">
+        <span class="close-icon" onclick="closeTray()">&#10006;</span>
+        <br>
+        <iframe id="trayIframe" class="tray-iframe" frameborder="0" style="background: transparent;" width="100%"
+            height="100%"></iframe>
+    </div>
+    <!-- Secure Embed Section -->
+    <div class="secureembed">
+        <span class="close-embed-icon" onclick="closeEmbed()">&#10006;</span>
+        <br>
+    </div>
+    <div class="seliing-features">
+        <!-- Features and Demo Section -->
+        <section id="features" class="features">
+            <h2>Key Features</h2>
+            <div class="features-container">
+                <!-- Feature 1 -->
+                <div class="feature">
+                    <img src="https://media.istockphoto.com/id/1295900106/photo/data-scientists-male-programmer-using-laptop-analyzing-and-developing-in-various-information.jpg?s=2048x2048&w=is&k=20&c=fBQm0fvR7I5s8xT-BhnSbhl8OoZJIi_Bqh7Whwrk95g="
+                    alt="Feature 1 Image" />
+                <h3>Feature 1</h3>
+                <p>
+                    Description of Feature 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </div>
+            <!-- Feature 2 -->
+            <div class="feature">
+                <img src="https://media.istockphoto.com/id/1311598658/photo/businessman-trading-online-stock-market-on-teblet-screen-digital-investment-concept.jpg?s=2048x2048&w=is&k=20&c=YSjDgQRHhi-kPn3GpowGFLPB8jEJN8SFrp2rpBFUD58="
+                alt="Feature 2 Image" />
+                <h3>Feature 2</h3>
+                <p>
+                    Description of Feature 2. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+            <!-- Feature 3 -->
+            <div class="feature">
+                <img src="https://media.istockphoto.com/id/1344939844/photo/hand-holding-drawing-virtual-lightbulb-with-brain-on-bokeh-background-for-creative-and-smart.jpg?s=2048x2048&w=is&k=20&c=vL6VgSTXd9Xn3d0F8DCD_a9o2LO2O_UcTpHPrs4HaVc="
+                alt="Feature 3 Image" />
+                <h3>Feature 3</h3>
+                <p>
+                    Description of Feature 3. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                </p>
+            </div>
+        </div>
+        <!-- Demo Container -->
+        <div class="demo-container">
+            <button id="fillFormButton" onclick="showIframeInTray()">
+                Schedule a Demo
+            </button>
+        </div>
+        <iframe class="studio-embed" src="" frameborder="0" style="background: transparent" width="100%"
+        height="0"></iframe>
+    </section>
+    
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <h2>Pricing</h2>
+        <br />
+        <!-- Pricing Plans -->
+        <div class="pricing-plan">
+            <h3>Basic Plan</h3>
+            <p>Description of the Basic Plan.</p>
+            <span class="price">$19.99/month</span>
+            <a href="#signup" class="cta-button">Get Started</a>
+        </div>
+        <div class="pricing-plan">
+            <h3>Premium Plan</h3>
+            <p>Description of the Premium Plan.</p>
+            <span class="price">$29.99/month</span>
+            <a href="#signup" class="cta-button">Get Started</a>
+        </div>
+        <!-- Add more pricing plans as needed -->
+    </section>
+</div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <br>
+        <p>Have questions? Reach out to us!</p>
+        <br>
+        <!-- Contact Form -->
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit" class="cta-button">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 Your SaaS Company. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function buttonClick() {
+            var First_name = document.getElementById('FirstName').value;
+            var Last_name = document.getElementById('LastName').value;
+            var email = document.getElementById('Email').value;
+
+            var iframeSrc =
+                "https://poc.dronahq.io/jE6kq89NHZEvVXFFL12cFBHMpWOmm9S6Xah5lxRJKq7wB?type=emd" +
+                "&FirstName=" + encodeURIComponent(First_name) +
+                "&LastName=" + encodeURIComponent(Last_name) +
+                "&Email=" + encodeURIComponent(email);
+
+            // Show the iframe in the tray
+            showIframeInTrayWithData(iframeSrc);
+            closePopup();
+        }
+        function closeEmbed() {
+            $(".secureembed #salesforce").remove();
+            document.getElementsByClassName('secureembed')[0].style.display = 'none';
+        }
+        function openPopup() {
+            // Add the 'active' class to the popup to show it
+            document.getElementById('popup').style.display = 'block';
+            document.querySelector('.popup-overlay').style.display = 'block';
+        }
+
+        function closePopup() {
+            // Remove the 'active' class to hide the popup
+            document.getElementById('popup').style.display = 'none';
+            document.querySelector('.popup-overlay').style.display = 'none';
+        }
+
+        function submitForm() {
+            // Add your logic to handle form submission here
+            closePopup();
+        }
+
+        function openTray() {
+            document.getElementById('tray').style.right = '0';
+        }
+
+        function closeTray() {
+            document.getElementById('tray').style.right = '-500px';
+        }
+
+        function showIframeInTray() {
+            let traysIframe = document.getElementById('trayIframe');
+            traysIframe.src = "https://poc.dronahq.io/jE6kq89NHZEvVXFFL12cFBHMpWOmm9S6Xah5lxRJKq7wB?type=emd";
+            openTray();
+        }
+
+        function showIframeInTrayWithData(src) {
+            var trayIframe = document.getElementById('trayIframe');
+            trayIframe.src = src;
+            openTray();
+        }
+
+        // Add this to your existing script or create a new script file
+
+        function openLoginPopup() {
+            document.getElementById('loginPopup').classList.add('active');
+            document.getElementById('loginOverlay').style.display = 'block';
+        }
+
+        function closeLoginPopup() {
+            document.getElementById('loginPopup').classList.remove('active');
+            document.getElementById('loginOverlay').style.display = 'none';
+        }
+
+        function submitLogin() {
+            // Get the email from the login form
+            var userEmail = document.getElementById('loginEmail').value;
+            var sellingFeaturesDiv = document.getElementsByClassName('.selling-features')[0];
+            
+            // Make the POST request
+            fetch("https://automations.dronahq.com/webhook/653a9a5949604e762a496bf8", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    email: userEmail
+                })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Success:', data.token); // logging the token
+                   if(data.token){ 
+                    $(document).ready(function () {
+                        var embed = `<dronahq-microapp appServer ="https://web.dronahq.io" embedId ="salesforce" token =${data.token}></dronahq-microapp>`;
+                        $(".secureembed").append(embed);
+                    })
+                    closeLoginPopup();
+                    // Show embed
+                    var secureEmbedDiv = document.getElementsByClassName('secureembed')[0];
+                    secureEmbedDiv.style.display = 'block';
+                    sellingFeaturesDiv.style.display = 'none';
+                }
+                    else{
+                        window.alert("Unauthorized");
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    window.alert("Unauthorized");
+                });
+        }
+    </script>
+</body>
+
+</html>

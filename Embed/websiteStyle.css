@@ -1,0 +1,418 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color and text color to the body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Style the header/navigation */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 15px;
+}
+
+/* Style the hero section */
+.hero {
+    text-align: center;
+    padding: 3rem;
+    background-color: #fff;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Updated CSS for Features Section */
+.features {
+    text-align: center;
+    padding: 3rem;
+    background-color: #f8f8f8;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.feature {
+    max-width: 300px;
+    width: 100%;
+    margin-bottom: 2rem;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+}
+
+.feature img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature p {
+    margin-bottom: 1rem;
+}
+
+.fill-form-button {
+    margin-top: 2rem;
+}
+
+.fill-form-button .cta-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.fill-form-button .cta-button:hover {
+    background-color: #555;
+}
+
+/* Style the "Fill a Form" button */
+.fill-form {
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+    background-color: #333;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.fill-form:hover {
+    background-color: #555;
+}
+
+/* Improved Pricing Section */
+.pricing {
+    text-align: center;
+    padding: 3rem;
+    background-color: #f8f8f8;
+}
+
+.pricing-plan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.pricing-plan p {
+    margin-bottom: 1.5rem;
+}
+
+/* Style the call-to-action button */
+.pricing-plan .cta-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.pricing-plan .cta-button:hover {
+    background-color: #555;
+}
+
+/* Revamped Contact Section */
+.contact {
+    text-align: center;
+    padding: 3rem;
+    background-color: #fff;
+    border: 1px solid #ccc; /* Add a border to the contact section */
+    border-radius: 8px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.25rem; /* Reduce the gap between label and input */
+    text-align: left;
+}
+
+form input {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style the submit button */
+form button,
+#popup button {
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover,
+#popup button:hover {
+    background-color: #555;
+}
+
+/* Style the footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Style the call-to-action button */
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #555;
+}
+
+#fillFormButton {
+    font-size: 20px;
+    width: 200px;
+    height: 40px;
+    border: solid 1px black;
+    border-radius: 6px;
+    color: white;
+    background-color: #333333;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+/* Add this to your websiteStyle.css or include it in the head of your HTML file */
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: #fff;
+    z-index: 9999;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.popup input,
+.popup button {
+    margin-top: 10px;
+}
+
+/* Apply background blur effect to the entire page when the popup is open */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for the level of blur */
+    z-index: 9998;
+    backdrop-filter: blur(5px); /* Adjust the blur radius */
+}
+
+/* Show the overlay when the popup is open */
+#popup.active + .popup-overlay {
+    display: block;
+}
+
+#tray {
+    position: fixed;
+    top: 0;
+    right: -500px; /* Start off-screen */
+    width: 500px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+}
+
+.tray-iframe {
+    height: calc(100% - 40px); /* Adjust height based on your design */
+    width: 100%;
+}
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.popup form button {
+    margin: 20px;
+}
+
+.login {
+    font-size: 18px;
+    width: 100px;
+    height: 40px;
+    border: solid 1px black;
+    border-radius: 6px;
+    color: white;
+    background-color: #333333;
+    margin-top: -8px;
+    cursor: pointer;
+}
+
+.login:hover {
+    background-color: #555;
+}
+
+/* Add this to your existing CSS or create a new style sheet */
+
+#loginPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: #fff;
+    z-index: 9999;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+#loginPopup.active {
+    display: block;
+}
+
+#loginOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+}
+
+#loginPopup.active + #loginOverlay {
+    display: block;
+}
+
+/*For Secure Embed*/
+
+.secureembed {
+    /* width: 100%; 
+    height: 830px;  */
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff; /* Adjust the background color and opacity */
+    z-index: 9999; /* Make sure it's on top of other elements */
+}
+
+.close-embed-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #000;
+    cursor: pointer;
+    z-index: 1;
+}

@@ -1,0 +1,32 @@
+<!-- http://localhost:8080 -->
+<!-- https://ubuntu.onprem.dronahq.com -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.dronahq.com/dronahq-embed.js"
+      charset="utf-8"
+    ></script>
+  </head>
+
+  <body></body>
+
+  <script>
+    var token = sessionStorage.getItem("token");
+    $(document).ready(function () {
+      var embed = `<dronahq-microapp appServer ="https://web.dronahq.io" embedId ="salesforce" token =${token}></dronahq-microapp>`;
+      $("body").append(embed);
+    });
+  </script>
+</html>
